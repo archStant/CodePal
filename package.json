@@ -1,0 +1,102 @@
+{
+  "name": "codepal",
+  "displayName": "CodePal",
+  "description": "A coding companion that reacts to your errors in real-time.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/archStant/CodePal"
+  },
+  "author": {
+    "name": "roald"
+  },
+  "license": "MIT",
+  "icon": "assets/icon.png",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.104.0"
+  },
+  "categories": [
+    "Other",
+    "Visualization"
+  ],
+  "pricing": "Free",
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "codepal.registerPal",
+        "title": "CodePal: Register Pal",
+        "category": "CodePal"
+      },
+      {
+        "command": "codepal.choosePal",
+        "title": "CodePal: Choose Active Pal",
+        "category": "CodePal"
+      },
+      {
+        "command": "codepal.deletePal",
+        "title": "CodePal: Delete Pal",
+        "category": "CodePal"
+      },
+      {
+        "command": "codepal.openPalsDir",
+        "title": "CodePal: Open Pals Directory",
+        "category": "CodePal"
+      },
+      {
+        "command": "codepal.setPanicLimit",
+        "title": "CodePal: Set Panic Limit",
+        "category": "CodePal"
+      }
+    ],
+    "configuration": {
+      "type": "object",
+      "title": "CodePal",
+      "properties": {
+        "codepal.panicLimit": {
+          "type": "number",
+          "default": 30,
+          "description": "Number of errors before CodePal shows the top panic level."
+        }
+      }
+    },
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "codepalSidebar",
+          "title": "Code Pal",
+          "icon": "assets/icon.svg"
+        }
+      ]
+    },
+    "views": {
+      "codepalSidebar": [
+        {
+          "id": "codePalView",
+          "name": "CodePal", 
+          "type": "webview"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.104.0",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "22.x",
+    "@typescript-eslint/eslint-plugin": "^8.42.0",
+    "@typescript-eslint/parser": "^8.42.0",
+    "eslint": "^9.34.0",
+    "typescript": "^5.9.2",
+    "@vscode/test-cli": "^0.0.11",
+    "@vscode/test-electron": "^2.5.2"
+  }
+}
