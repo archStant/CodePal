@@ -28,7 +28,7 @@ Delete a registered pal permanently
 Open the folder containing all registered pals in your system’s file explorer.
 
 * `CodePal: Set Panic Limit`
-Define the number of errors required for the topmost image level.
+Define the number of errors required for the topmost image level. Default is 20.
 
 ### Configuration
 
