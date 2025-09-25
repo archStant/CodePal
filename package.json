@@ -1,6 +1,6 @@
 {
-  "name": "codepal",
-  "displayName": "CodePal",
+  "name": "mycodepal",
+  "displayName": "CodePal Companion",
   "description": "A coding companion that reacts to your errors in real-time.",
   "repository": {
     "type": "git",
@@ -9,11 +9,12 @@
   "author": {
     "name": "roald"
   },
+  "publisher": "ArchStant",
   "license": "MIT",
   "icon": "assets/icon.png",
   "version": "0.0.1",
   "engines": {
-    "vscode": "^1.104.0"
+    "vscode": "^1.103.0"
   },
   "categories": [
     "Other",
